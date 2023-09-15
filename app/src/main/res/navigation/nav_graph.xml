@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.example.imagetosketch.ui.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_editImageFragment"
+            app:destination="@id/editImageFragment">
+        <argument
+            android:name="MyArgument"
+            app:argType="string"/>
+
+        </action>
+        <action
+            android:id="@+id/action_homeScreenFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/editImageFragment"
+        android:name="com.example.imagetosketch.ui.EditImageFragment"
+        android:label="fragment_edit_image"
+        tools:layout="@layout/fragment_edit_image" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.imagetosketch.ui.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_editImageFragment"
+            app:destination="@id/editImageFragment" >
+            <argument
+                android:name="imageUri"
+                app:argType="string"/>
+        </action>
+    </fragment>
+</navigation>

@@ -1,0 +1,4 @@
+/Users/nimeshvasani/Library/Android/sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /Users/nimeshvasani/AndroidStudioProjects/ImageToSketch/opencv/.cxx/Debug/406u156x/x86 \
+  opencv_jni_shared
